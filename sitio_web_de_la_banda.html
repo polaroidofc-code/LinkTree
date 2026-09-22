@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio Oficial & Press Kit - Banda</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#E50914',
+                            dark: '#0A0A0A',
+                            card: '#161616',
+                            border: '#2A2A2A',
+                            accent: '#FF2A35'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-overlay {
+            background: linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,1) 100%);
+        }
+        .glow-effect:hover {
+            box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-200 font-sans antialiased selection:bg-brand-red selection:text-white">
+
+    <!-- Navegación Fija -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#inicio" class="text-xl font-black tracking-widest text-white uppercase hover:text-brand-red transition">
+                NOMBRE<span class="text-brand-red">BANDA</span>
+            </a>
+            <div class="hidden md:flex space-x-6 text-sm font-semibold uppercase tracking-wider text-gray-300">
+                <a href="#inicio" class="hover:text-brand-red transition">Inicio</a>
+                <a href="#fechas" class="hover:text-brand-red transition">Fechas</a>
+                <a href="#musica" class="hover:text-brand-red transition">Música</a>
+                <a href="#presskit" class="hover:text-brand-red transition">Press Kit</a>
+                <a href="#contacto" class="hover:text-brand-red transition">Contacto</a>
+            </div>
+            <!-- Botón Menú Móvil -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card border-b border-brand-border px-4 pt-2 pb-4 space-y-3 font-semibold uppercase text-sm">
+            <a href="#inicio" class="block hover:text-brand-red py-1">Inicio</a>
+            <a href="#fechas" class="block hover:text-brand-red py-1">Fechas</a>
+            <a href="#musica" class="block hover:text-brand-red py-1">Música</a>
+            <a href="#presskit" class="block hover:text-brand-red py-1">Press Kit</a>
+            <a href="#contacto" class="block hover:text-brand-red py-1">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- INICIO / HERO SECTION -->
+    <section id="inicio" class="relative min-h-screen flex items-end pb-12 pt-24 justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1920&auto=format&fit=crop');">
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+            <span class="text-brand-red uppercase font-bold tracking-widest text-sm bg-brand-red/10 px-3 py-1 rounded-full border border-brand-red/30 mb-4 inline-block">Nuevo Lanzamiento</span>
+            <h1 class="text-4xl md:text-7xl font-black uppercase tracking-tight text-white mb-4">NOMBRE DE LA BANDA</h1>
+            <p class="text-gray-400 text-base md:text-xl max-w-2xl mx-auto mb-8">Rock / Pop Alternativo • Buenos Aires, Argentina</p>
+
+            <!-- Links Rápidos (Estilo Linktree Redes) -->
+            <div class="flex flex-wrap justify-center gap-4 mb-10">
+                <a href="https://spotify.com" target="_blank" class="flex items-center space-x-2 bg-brand-card hover:bg-brand-red border border-brand-border px-5 py-3 rounded-full font-bold text-sm text-white transition glow-effect">
+                    <i class="fa-brands fa-spotify text-xl"></i>
+                    <span>Spotify</span>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="flex items-center space-x-2 bg-brand-card hover:bg-brand-red border border-brand-border px-5 py-3 rounded-full font-bold text-sm text-white transition glow-effect">
+                    <i class="fa-brands fa-instagram text-xl"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://youtube.com" target="_blank" class="flex items-center space-x-2 bg-brand-card hover:bg-brand-red border border-brand-border px-5 py-3 rounded-full font-bold text-sm text-white transition glow-effect">
+                    <i class="fa-brands fa-youtube text-xl"></i>
+                    <span>YouTube</span>
+                </a>
+                <a href="https://tiktok.com" target="_blank" class="flex items-center space-x-2 bg-brand-card hover:bg-brand-red border border-brand-border px-5 py-3 rounded-full font-bold text-sm text-white transition glow-effect">
+                    <i class="fa-brands fa-tiktok text-xl"></i>
+                    <span>TikTok</span>
+                </a>
+            </div>
+
+            <!-- Banner Destacado Próxima Fecha -->
+            <div class="bg-gradient-to-r from-brand-card via-neutral-900 to-brand-card p-6 rounded-2xl border border-brand-red/40 max-w-xl mx-auto text-left shadow-2xl">
+                <div class="flex items-center justify-between mb-2">
+                    <span class="text-xs uppercase font-extrabold text-brand-red tracking-wider">🔥 Próximo Show Impertible</span>
+                    <span class="bg-red-950/60 text-red-300 text-xs px-2.5 py-0.5 rounded border border-red-800">Entradas Limitadas</span>
+                </div>
+                <h3 class="text-2xl font-black text-white">Niceto Club - Palermo</h3>
+                <p class="text-gray-300 text-sm mb-4"><i class="fa-solid fa-calendar-day text-brand-red mr-2"></i>Sábado 15 de Noviembre • 21:00 hs</p>
+                <a href="#" class="inline-block w-full text-center bg-brand-red hover:bg-brand-accent text-white font-black py-3 rounded-xl transition shadow-lg">COMPRAR ENTRADAS</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRÓXIMAS FECHAS / AGENDA -->
+    <section id="fechas" class="py-20 px-4 max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-2">Próximas Fechas</h2>
+            <div class="w-16 h-1 bg-brand-red mx-auto"></div>
+        </div>
+
+        <div class="space-y-4">
+            <!-- Item Fecha 1 -->
+            <div class="bg-brand-card border border-brand-border p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 hover:border-gray-600 transition">
+                <div class="flex items-center space-x-6 w-full md:w-auto">
+                    <div class="bg-brand-dark px-4 py-3 rounded-xl border border-brand-border text-center min-w-[80px]">
+                        <span class="block text-2xl font-black text-brand-red">15</span>
+                        <span class="block text-xs font-bold uppercase text-gray-400">NOV</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Niceto Club</h4>
+                        <p class="text-sm text-gray-400"><i class="fa-solid fa-location-dot text-brand-red mr-1"></i> Palermo, CABA • 21:00 hs</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-auto flex items-center gap-3">
+                    <a href="https://maps.google.com" target="_blank" class="p-3 bg-brand-dark hover:bg-neutral-800 rounded-xl border border-brand-border text-gray-300 text-sm" title="Ver Ubicación">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </a>
+                    <a href="#" class="flex-1 md:flex-none text-center bg-brand-red hover:bg-brand-accent px-6 py-3 rounded-xl font-bold text-sm text-white transition">Entradas</a>
+                </div>
+            </div>
+
+            <!-- Item Fecha 2 -->
+            <div class="bg-brand-card border border-brand-border p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 hover:border-gray-600 transition">
+                <div class="flex items-center space-x-6 w-full md:w-auto">
+                    <div class="bg-brand-dark px-4 py-3 rounded-xl border border-brand-border text-center min-w-[80px]">
+                        <span class="block text-2xl font-black text-brand-red">02</span>
+                        <span class="block text-xs font-bold uppercase text-gray-400">DIC</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Club Paraguay</h4>
+                        <p class="text-sm text-gray-400"><i class="fa-solid fa-location-dot text-brand-red mr-1"></i> Córdoba Capital • 20:00 hs</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-auto flex items-center gap-3">
+                    <a href="https://maps.google.com" target="_blank" class="p-3 bg-brand-dark hover:bg-neutral-800 rounded-xl border border-brand-border text-gray-300 text-sm" title="Ver Ubicación">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </a>
+                    <a href="#" class="flex-1 md:flex-none text-center bg-brand-red hover:bg-brand-accent px-6 py-3 rounded-xl font-bold text-sm text-white transition">Entradas</a>
+                </div>
+            </div>
+
+            <!-- Item Fecha 3 -->
+            <div class="bg-brand-card border border-brand-border p-5 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-4 hover:border-gray-600 transition">
+                <div class="flex items-center space-x-6 w-full md:w-auto">
+                    <div class="bg-brand-dark px-4 py-3 rounded-xl border border-brand-border text-center min-w-[80px]">
+                        <span class="block text-2xl font-black text-brand-red">18</span>
+                        <span class="block text-xs font-bold uppercase text-gray-400">DIC</span>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Teatro Opera</h4>
+                        <p class="text-sm text-gray-400"><i class="fa-solid fa-location-dot text-brand-red mr-1"></i> La Plata, Buenos Aires • 21:30 hs</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-auto flex items-center gap-3">
+                    <a href="https://maps.google.com" target="_blank" class="p-3 bg-brand-dark hover:bg-neutral-800 rounded-xl border border-brand-border text-gray-300 text-sm" title="Ver Ubicación">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                    </a>
+                    <a href="#" class="flex-1 md:flex-none text-center bg-brand-red hover:bg-brand-accent px-6 py-3 rounded-xl font-bold text-sm text-white transition">Entradas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÚSICA & VIDEO -->
+    <section id="musica" class="py-20 bg-neutral-950 px-4 border-y border-brand-border">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-2">Escuchá lo Nuevo</h2>
+                <div class="w-16 h-1 bg-brand-red mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- Spotify Embed de Muestra -->
+                <div class="bg-brand-card p-4 rounded-2xl border border-brand-border">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <!-- YouTube Video Embed de Muestra -->
+                <div class="bg-brand-card p-4 rounded-2xl border border-brand-border h-full flex flex-col justify-center">
+                    <div class="aspect-video w-full rounded-xl overflow-hidden">
+                        <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-center text-sm font-bold text-gray-400 mt-3">Videoclip Oficial - "Último Single"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESS KIT (EPK) -->
+    <section id="presskit" class="py-20 px-4 max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="text-brand-red font-bold uppercase text-xs tracking-widest">Para Prensa & Festivales</span>
+            <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-2">Electronic Press Kit (EPK)</h2>
+            <div class="w-16 h-1 bg-brand-red mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <!-- Previsualización / Tarjeta PDF -->
+            <div class="md:col-span-2 bg-brand-card p-6 rounded-2xl border border-brand-border flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-file-pdf text-brand-red text-2xl"></i>
+                            Dossier de Prensa Oficial
+                        </h3>
+                        <span class="text-xs bg-gray-800 text-gray-300 px-2 py-1 rounded">PDF • 5.2 MB</span>
+                    </div>
+                    <p class="text-sm text-gray-400 mb-6">
+                        Incluye biografía oficial de la banda, historia, integrantes, lanzamientos clave, requerimientos de rider técnico y apariciones destacadas en medios de comunicación.
+                    </p>
+                    <!-- Previsualizador Simulado / Contenedor de Embed -->
+                    <div class="bg-brand-dark h-48 rounded-xl border border-dashed border-gray-700 flex flex-col items-center justify-center text-center p-4 mb-6">
+                        <i class="fa-solid fa-eye text-3xl text-gray-500 mb-2"></i>
+                        <p class="text-xs text-gray-400">Previsualización en vivo del dossier</p>
+                        <span class="text-[10px] text-gray-600 mt-1">(Tu archivo dossier.pdf subido a Drive / Servidor)</span>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <a href="#" download class="flex-1 bg-brand-red hover:bg-brand-accent text-center font-bold text-white py-3 rounded-xl transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Descargar Presskit (PDF)</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Recursos de Prensa Adicionales -->
+            <div class="bg-brand-card p-6 rounded-2xl border border-brand-border flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-folder-open text-brand-red"></i>
+                        Recursos HQ
+                    </h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="bg-brand-dark p-3 rounded-xl border border-brand-border flex items-center justify-between">
+                            <span class="text-gray-300 font-semibold">Fotos Promocionales (300DPI)</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-red"></i>
+                        </li>
+                        <li class="bg-brand-dark p-3 rounded-xl border border-brand-border flex items-center justify-between">
+                            <span class="text-gray-300 font-semibold">Logos Vectorizados (PNG/SVG)</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-red"></i>
+                        </li>
+                        <li class="bg-brand-dark p-3 rounded-xl border border-brand-border flex items-center justify-between">
+                            <span class="text-gray-300 font-semibold">Rider Técnico & Planta de Escenario</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-brand-red"></i>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" target="_blank" class="mt-6 w-full border border-gray-600 hover:border-white text-gray-300 hover:text-white font-bold py-3 rounded-xl text-center transition block">
+                    Abrir Carpeta Google Drive
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO & BOOKING -->
+    <section id="contacto" class="py-20 bg-neutral-950 px-4 border-t border-brand-border">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-2">Contacto & Booking</h2>
+                <p class="text-gray-400 text-sm">¿Querés contratarnos para tu festival, bar o evento?</p>
+                <div class="w-16 h-1 bg-brand-red mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Información Directa -->
+                <div class="space-y-6">
+                    <div class="bg-brand-card p-5 rounded-2xl border border-brand-border flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/30 flex items-center justify-center text-brand-red text-xl">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 uppercase">Correo de Booking</span>
+                            <p class="text-white font-bold">contacto@nombredelabanda.com</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-card p-5 rounded-2xl border border-brand-border flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-brand-red/10 border border-brand-red/30 flex items-center justify-center text-brand-red text-xl">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-gray-500 uppercase">Management / Teléfono</span>
+                            <p class="text-white font-bold">+54 9 11 1234-5678</p>
+                        </div>
+                    </div>
+
+                    <!-- Redes en Contacto -->
+                    <div class="bg-brand-card p-5 rounded-2xl border border-brand-border">
+                        <span class="text-xs font-bold text-gray-500 uppercase block mb-3">Redes Oficiales</span>
+                        <div class="flex space-x-4 text-2xl text-gray-300">
+                            <a href="#" class="hover:text-brand-red transition"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" class="hover:text-brand-red transition"><i class="fa-brands fa-spotify"></i></a>
+                            <a href="#" class="hover:text-brand-red transition"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#" class="hover:text-brand-red transition"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario Rápido -->
+                <form class="bg-brand-card p-6 rounded-2xl border border-brand-border space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Nombre o Productora</label>
+                        <input type="text" placeholder="Tu nombre" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-red">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Email de contacto</label>
+                        <input type="email" placeholder="tu@email.com" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-red">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-gray-400 uppercase mb-1">Mensaje / Consulta</label>
+                        <textarea rows="3" placeholder="Detalles de la fecha, lugar, propuesta..." class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-brand-red"></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-brand-red hover:bg-brand-accent text-white font-bold py-3 rounded-xl transition">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-black text-center text-xs text-gray-600 border-t border-brand-border">
+        <p>© 2026 Nombre de la Banda. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Script Menú Móvil -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
